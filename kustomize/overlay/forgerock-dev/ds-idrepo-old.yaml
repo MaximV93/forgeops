@@ -23,6 +23,8 @@ spec:
             cpu: 500m
           limits:
             memory: 1Gi
+      imagePullSecrets:
+        - name: githubpullsecret            
   volumeClaimTemplates:
   - metadata:
       name: data
