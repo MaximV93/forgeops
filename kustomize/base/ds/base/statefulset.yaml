@@ -49,7 +49,7 @@ spec:
         operator: "Exists"
       initContainers:
       - name: initialize
-        image: ghcr.io/maximv93/ds:v1
+        image: ds
         imagePullPolicy: Always
         command: ["/opt/opendj/scripts/init-and-restore.sh"]
         volumeMounts:
@@ -105,7 +105,7 @@ spec:
             memory: 1024Mi
       containers:
       - name: ds
-        image: ghcr.io/maximv93/ds:v1
+        image: ds
         imagePullPolicy: Always
         args:
         - start-ds
