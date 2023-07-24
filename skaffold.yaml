@@ -96,9 +96,12 @@ kind: Config
 # Default profile
 build: &default-build
   artifacts: *default-artifacts
+  # tagPolicy: &default-tag-policy
+  #   gitCommit:
+  #     variant: AbbrevTreeSha
   tagPolicy: &default-tag-policy
-    gitCommit:
-      variant: AbbrevTreeSha
+    envTemplate:
+      template: "{{.FORGEOPSVERSION}}"  
 deploy: &default-deploy
   statusCheckDeadlineSeconds: 900
   kustomize:
