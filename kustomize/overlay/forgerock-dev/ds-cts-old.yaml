@@ -9,6 +9,7 @@ spec:
     spec:
       containers:
         - name: ds
+          image: ghcr.io/maximv93/ds-cts:v1 
           resources:
             requests:
               memory: 1Gi
@@ -17,6 +18,7 @@ spec:
               memory: 1Gi
       initContainers:
       - name: initialize
+        image: ghcr.io/maximv93/ds-cts:v1 
         resources:
           requests:
             memory: 1Gi
