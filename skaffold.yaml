@@ -145,6 +145,19 @@ profiles:
       paths:
       - ./kustomize/overlay/large
 
+- name: forgerock-dev
+  build: *default-build
+  deploy:
+    kustomize:
+      paths:
+      - ./kustomize/overlay/forgerock-dev
+
+- name: forgerock-prod
+  build: *default-build
+  deploy:
+    kustomize:
+      paths:
+      - ./kustomize/overlay/forgerock-prod
 ###################################################################
 #####################INDIVIDUAL COMPONENTS#########################
 ###################################################################
