@@ -18,7 +18,7 @@ spec:
         runAsGroup: 0
       initContainers:
       - name: fbc-init
-        image: idm
+        image: ghcr.io/maximv93/idm:v1
         imagePullPolicy: Always
         volumeMounts:
         - mountPath: /fbc
@@ -36,7 +36,7 @@ spec:
             cp -vr ui conf script /fbc
           fi
       - name: truststore-init
-        image: idm
+        image: ghcr.io/maximv93/idm:v1
         imagePullPolicy: Always
         volumeMounts:
         - name: new-truststore
@@ -56,7 +56,7 @@ spec:
           # value: "/var/run/secrets/truststore/ca.crt"
       containers:
       - name: openidm
-        image: idm
+        image: ghcr.io/maximv93/idm:v1
         imagePullPolicy: Always
         env:
         - name: NAMESPACE

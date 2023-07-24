@@ -23,7 +23,7 @@ spec:
       # preserves configuration across pod restarts (for example, if AM crashes or suffers an OOM kill from k8s).
       # This is most useful in development environments, so users do not lose their changes if the pod restarts.
       - name: fbc-init
-        image: am
+        image: ghcr.io/maximv93/am:v1
         imagePullPolicy: Always
         volumeMounts:
         - mountPath: /fbc
@@ -41,7 +41,7 @@ spec:
             cp -r .homeVersion * /fbc
           fi
       - name: truststore-init
-        image: am
+        image: ghcr.io/maximv93/am:v1
         imagePullPolicy: Always
         volumeMounts:
         - name: new-truststore
@@ -61,7 +61,7 @@ spec:
           # value: "/var/run/secrets/truststore/ca.crt"
       containers:
       - name: openam
-        image: am
+        image: ghcr.io/maximv93/am:v1
         imagePullPolicy: Always
         command:
           - bash

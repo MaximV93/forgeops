@@ -26,7 +26,7 @@ spec:
             name: amster-env-secrets
         - secretRef:
             name: ds-env-secrets
-        image: amster
+        image: ghcr.io/maximv93/amster:v1
         imagePullPolicy: Always
         name: amster
         resources:
@@ -47,7 +47,7 @@ spec:
       # to copy the exported files
       containers:
       - name: pause
-        image: amster
+        image: ghcr.io/maximv93/amster:v1
         imagePullPolicy: Always
         args:  ["bash", "-c", "sleep ${DURATION:-10}"]
         envFrom:
