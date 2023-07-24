@@ -1,4 +1,5 @@
-FROM ghcr.io/maximv93/amster:7.3.0
+FROM gcr.io/forgerock-io/amster:7.3.0
+# FROM ghcr.io/maximv93/amster:7.3.0
 
 USER root
 

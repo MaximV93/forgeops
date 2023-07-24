@@ -1,5 +1,6 @@
 # Note: M5 integration with AM currently not working
-FROM ghcr.io/maximv93/idm:7.3.0
+FROM gcr.io/forgerock-io/idm-cdk:7.3.0
+# FROM ghcr.io/maximv93/idm:7.3.0
 
 COPY debian-buster-sources.list /etc/apt/sources.list
 
