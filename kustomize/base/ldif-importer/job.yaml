@@ -3,6 +3,7 @@ kind: Job
 metadata:
   name: ldif-importer
 spec:
+  ttlSecondsAfterFinished: 60
   template:
     metadata:
       labels:

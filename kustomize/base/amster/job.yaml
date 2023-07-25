@@ -3,6 +3,7 @@ kind: Job
 metadata:
   name: amster
 spec:
+  ttlSecondsAfterFinished: 60
   backoffLimit: 0
   template:
     metadata:
