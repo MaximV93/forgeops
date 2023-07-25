@@ -28,7 +28,8 @@ spec:
             name: amster-env-secrets
         - secretRef:
             name: ds-env-secrets
-        image: ghcr.io/maximv93/amster:v1
+        # image: ghcr.io/maximv93/amster:v1
+        image: amster
         imagePullPolicy: Always
         name: amster
         resources:

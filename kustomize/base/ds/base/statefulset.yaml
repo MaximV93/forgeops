@@ -49,6 +49,7 @@ spec:
         operator: "Exists"
       initContainers:
       - name: initialize
+        # image: ghcr.io/maximv93/ds:v1 
         image: ds
         imagePullPolicy: Always
         command: ["/opt/opendj/scripts/init-and-restore.sh"]
@@ -106,6 +107,7 @@ spec:
       containers:
       - name: ds
         image: ds
+        # image: ghcr.io/maximv93/ds:v1
         imagePullPolicy: Always
         args:
         - start-ds
